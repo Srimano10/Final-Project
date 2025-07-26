@@ -2,7 +2,7 @@
 Password strength analyzer
 IN MY PROJECT I HAVE MADE PASSWORD STRENGTH ANALYZER WITH PASSWORD GENERATOR WITH THE GUI
 
-THE CODE FOR THE PASSWORD STRENGTH ANALYZE :
+# THE CODE FOR THE PASSWORD STRENGTH ANALYZE :
 
 import math
 import re
@@ -38,12 +38,12 @@ def analyze_password(password):
    with open("summary.log", "a") as log:
         log.write(f"[{timestamp}] Password: {password} | Entropy: {entropy:.2f} | Strength: {strength}\n")
 
-# Run
+Run
 pwd = input("Enter password to analyze: ")
 analyze_password(pwd)
 
 
-THE CODE FOR THE PASSWORD GENERATOR :
+# THE CODE FOR THE PASSWORD GENERATOR :
 
 from utils import leetspeak_variants, add_suffixes, combine_inputs
 from datetime import datetime
@@ -70,12 +70,12 @@ timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 print(f"\n✅ Generated {count} advanced wordlist entries and saved to wordlist.txt")
 
-# Save stats
+ Save stats
 with open("summary.log", "a") as log:
     log.write(f"[{timestamp}] Wordlist generated with {count} entries using inputs: {name}, {dob}, {pet}\n")
 
 
-THE CODE FOR THE GUI LAUNCHER :
+# THE CODE FOR THE GUI LAUNCHER :
 
 import tkinter as tk
 import subprocess
